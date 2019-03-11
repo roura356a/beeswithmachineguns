@@ -169,7 +169,7 @@ def up(count, group, zone, image_id, instance_type, username, key_name, subnet, 
     try:
         ec2_connection = boto.ec2.connect_to_region(_get_region(zone))
     except boto.exception.NoAuthHandlerFound as e:
-        print("Authenciation config error, perhaps you do not have a ~/.boto file with correct permissions?")
+        print("Authentication config error, perhaps you do not have a ~/.boto file with correct permissions?")
         print(e.message)
         return e
     except Exception as e:
